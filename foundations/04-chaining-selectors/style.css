@@ -1,1 +1,21 @@
 /* Add CSS Styling */
+
+.avatar.proportioned {
+    height: auto;
+    width: 300px;
+}
+
+/* height will be dynaimc for prop  */
+
+.avatar.distorted {
+    height: 400px;
+    width: 200px;
+}
+
+/* hardcode is 200, so height is double this value  */
+
+/* do not forget the units (px)  */
+
+/* note the orginal prop / orginial distorted look nice because they have no restriction 
+ This also means page loading is caused by unbounded size (too large)  
+ These chaining rules are seen by the first div (aka avatar class)*/

@@ -1,11 +1,26 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-
-.para,
-.small-para {
+.small-para,
+.para{
   color: hsl(0, 0%, 0%);
   font-weight: 800;
+}
+/* .para,
+.small-para{
+  color: hsl(0, 0%, 0%);
+  font-weight: 800;
+} */
+/* 
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+} */
+
+
+
+.para {
+  font-size: 22px;
 }
 
 .small-para {
@@ -13,8 +28,20 @@ body {
   font-weight: 800;
 }
 
-.para {
-  font-size: 22px;
+
+/* notes: the order which the individual element selector matters  */
+/* Here I inverted grouped para then set ordered .para -> .small.para  */
+/* If I inverted group para the nset ordered .small.para -> .para */
+
+/* tdlr order for individual .para and .small-para matters ! */
+/* my guess, the html file for .para .small-para needs this rule else, it fails  */
+/* order matters since a convention is being used for cascading  */
+
+
+.button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
 }
 
 .confirm {
@@ -23,20 +50,15 @@ body {
   font-weight: bold;
 } 
 
-.button {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-
-.child {
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  font-size: 14px;
-}
+/* smae goes for button and confirm, cascading requires order  */
 
 div.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
+}
+.text .child {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
 }
